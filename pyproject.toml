@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urirun-node"
+version = "0.2.0"
+description = "Meta-package: the urirun node layer (mesh/routing/transport/flow/config/episode/twin_store — the node substrate that hosts and executes URI routes across a mesh). The `urirun_node` import package now ships inside the `urirun` distribution (the single source of truth); this distribution just depends on it so `pip install urirun-node` and `import urirun_node` keep working. The node SUBSTRATE lifts cleanly (extraction_audit.py preset H = GREEN); the CLI composition roots (node_cli/task_cli) stay in the host layer."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{ name = "if-uri" }]
+# Meta-package: ships NO import package of its own (the bundled `urirun` owns `urirun_node`),
+# so installing this alongside `urirun` cannot shadow the bundle copy.
+dependencies = [
+  "urirun>=0.4.190",
+]
+
+[project.urls]
+Homepage = "https://connect.ifuri.com"
+Repository = "https://github.com/if-uri/urirun-node"
+
+[tool.setuptools]
+packages = []                # meta-package — no import package shipped
