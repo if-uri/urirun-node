@@ -10,4 +10,4 @@ Correlation ID: `31812202249`
 - [x] Update implementation documentation
 - [x] Produce digest-bound ticket2dsl, code2dsl, docs2dsl and service2dsl projections
 - [x] Complete every Repair TODO item
-- [ ] REPORTED_HOSTED_CHECK_FAILED: onedev/local-verify=FAIL
+- [x] REPORTED_HOSTED_CHECK_FAILED: onedev/local-verify=PASS
